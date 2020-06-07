@@ -40,3 +40,8 @@ Bloodhound tip.
 7. $printer = $printers | where {$ _.name -eq "EvilPrinter"}
 8. $printer.Resume()
 ```
+@akita_zen from Argentina says
+
+```
+cat alive-subdomains.txt | parallel -j50 -q curl -w 'Status:%{http_code}\t  Size:%{size_download}\t %{url_effective}\n' -o /dev/null -sk
+```
