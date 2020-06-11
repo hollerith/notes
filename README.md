@@ -19,7 +19,7 @@ diskless linux reverse shell
 ["Computers you have admin on","HTML","pwn.html","MATCH (m:Group {name: 'GROUP@EXAMPLE.COM'})-[r:AdminTo]->(n:Computer) RETURN http://n.name"]
 Copy+paste -> CrackMapExec
 ````
-Bloodhound tip.
+Bloodhound tip. :star:
 
 ### @neosysforensics ™  for PrintDemon bug on Windows 7
 
