@@ -63,3 +63,5 @@ A quick and easy way of pretty printing JSON web tokens:
 
 ```` echo "<JWT>" | tr "." "\n" | base64 -D | jq "." (-d on Linux) ````
 
+### Powershell obfuscation
+![Powershell Obfuscation](./EaTH6REWsAE0rfU.jpeg)
