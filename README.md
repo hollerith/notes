@@ -65,3 +65,15 @@ A quick and easy way of pretty printing JSON web tokens:
 
 ### Powershell obfuscation
 ![Powershell Obfuscation](./EaTH6REWsAE0rfU.jpeg)
+
+
+### @0gtweet (Grzegorz Tworek) on Twitter says
+
+Live kernel dump with PowerShell one-liner :sunglasses:
+
+````
+$ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage
+Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath="C:\dmp"; IncludeLiveDump=$true}
+````
+
+
