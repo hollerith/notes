@@ -76,4 +76,8 @@ $ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft
 Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath="C:\dmp"; IncludeLiveDump=$true}
 ````
 
+### @joohoi to dump SAN and CN from certs.
 
+```echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep Subject:```
+vs
+```echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep DNS:```
