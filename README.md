@@ -78,6 +78,8 @@ Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{D
 
 ### @joohoi to dump SAN and CN from certs.
 
-```echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep Subject:```
+````echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep Subject:````
+
 vs
-```echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep DNS:```
+
+````echo QUIT|openssl s_client -connect http://google.com 2>/dev/null|openssl x509 -noout -text|grep DNS:````
