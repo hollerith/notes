@@ -1,4 +1,23 @@
 # notes 
+
+### @swiftonsecurity does no code
+
+Ransomware IOC.
+
+````
+adfind.exe
+nc.exe
+winexesvc.exe
+tor.exe
+cmdkey.exe
+regini.exe
+vaultcmd.exe
+ldifde.exe
+csvde.exe
+rar.exe
+dsquery.exe
+````
+
 ### @popopret with the wifi hax
 
 ````
