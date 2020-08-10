@@ -1,5 +1,25 @@
 # notes 
 
+### whoa there @Sambal0x (Richard Tan) with the beefiest threadzilla:
+Having trouble bypassing SSL-pinning on Android app? 
+
+````
+apktool -r d com.example.apk
+find . -type f -exec sed -i 's/https\:\/\/api.example.com\//http\:\/\/api.example.com\//g' {} +
+apktool empty-framework-dir --force
+apktool b com.example -o test.apk
+
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore test.apk alias_name
+
+````
+In Burp suite, configure Proxy Listener to redirect port from 80 to 443.
+
+Profit! though some app just don't work with this method 	:sweat_smile:
+
+Original idea from https://hackerone.com/blog/AndroidHackingMonth-qa-with-bagipro
+
+
 ### @swiftonsecurity does no code
 
 Ransomware IOC.
