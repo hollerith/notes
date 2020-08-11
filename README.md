@@ -1,5 +1,11 @@
 # notes 
 
+### @rootsecdev straight up making me type
+````
+$cert=(dir cert:currentuser\my\ -CodeSigningCert)
+Set-AuthenticodeSignature .\HashDeploy.ps1 $cert -TimestampServer http://tsa.starfieldtech.com
+````
+
 ### then this @h4x0r_dz 
 0day RCE exploit on vBulletin 5xx
 
