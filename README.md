@@ -1,5 +1,14 @@
 # notes 
 
+### android pentesting @vasim_infosec
+
+https://manifestsecurity.com/android-application-security/
+https://eshlomo.us/mobile-penetration-testing-kit/
+https://github.com/vaib25vicky/awesome-mobile-security
+https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
+video playlist : https://youtube.com/watch?v=vx-FKEqi9b8&list=PLgnrksnL_Rn09gGTTLgi-FL7HxPOoDk3R
+https://gbhackers.com/mobile-application-penetration-testing/amp/?__twitter_impression=true
+
 ### @jonasLyk burning shit down
 
 ````
