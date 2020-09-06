@@ -1,5 +1,15 @@
 # notes 
 
+### A rival! King Of Tips apparently
+
+https://github.com/KingOfBugbounty/KingOfBugBountyTips
+
+````
+export domain="https://paypal.com";gospider -s $domain -d 3 -c 300 | awk '/linkfinder/{print $NF}' | grep -v "http" | unfurl paths | anew | xargs -I@ -P50 sh -c 'echo $domain@ | httpx -silent -content-length'
+````
+
+:salt:
+
 ### Live dump Windows kernel with Grzegorz Tworek @0gtweet
 
 ````
