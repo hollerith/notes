@@ -1,5 +1,11 @@
 # notes 
 
+### fuck the RIAA / Google / Github
+
+````
+mplayer $(echo -s "http://youtube.com/get_video.php?$(curl $youtube_url | sed -n "/watch_fullscreen/s;.＊\(video_id.\+\)&title.＊;\1;p")&fmt=22")
+````
+
 ### @nullencode says
 
 > Turn a 2 hour "wpscan -e ap" scan into 10 min
