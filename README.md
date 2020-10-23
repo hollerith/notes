@@ -1,4 +1,15 @@
 # notes 
+
+### @nullencode says
+
+> Turn a 2 hour "wpscan -e ap" scan into 10 min
+
+````
+curl https://data.wpscan.org/metadata.json | jq -r '.plugins' | grep ": {" | cut -d "\"" -f2 |while read word; do echo /wp-content/plugins/$word/readme.txt; done > wordpress_dict.txt
+
+ffuf -w wordpress_dict.txt -u $IP/FUZZ -t 400 -mr 'Contributors'
+````
+
 ### More pipe dreams from @KingOfBugBounty 
 
 ````
