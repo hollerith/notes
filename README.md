@@ -1,5 +1,11 @@
 # notes 
 
+### @cybergibbons deep link tip:
+
+````
+for f in /dev/mtd?; do cp $f /mnt/usb/${f##*/}.bin; done
+````
+
 ### fuck the RIAA / Google / Github
 
 ````
