@@ -1,5 +1,15 @@
 # notes 
 
+
+
+### from @ngkogkos 
+
+Create custom wordlists for any sort of fuzzing from your Burp state files:
+
+````
+cat program.burp | strings | tok | sort -u > custom_wordlist.txt
+````
+
 ### @cybergibbons deep link tip:
 
 ````
