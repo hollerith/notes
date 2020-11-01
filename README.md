@@ -1,6 +1,12 @@
 # notes 
 
+### my dude @fak3r with the handiest of handy tips to red teams
 
+scan for raspberry pis under the desk
+
+````
+sudo nmap -sP 192.168.1.0/24 | awk '/^Nmap/{ip=$NF}/B8:27:EB/{print ip}'
+````
 
 ### from @ngkogkos 
 
