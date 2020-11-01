@@ -1,6 +1,6 @@
 # notes 
 
-### my dude @fak3r with the handiest of handy tips to red teams
+### my dude @fak3r
 
 scan for raspberry pis under the desk
 
