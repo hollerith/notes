@@ -1,5 +1,10 @@
 # notes 
 
+### @_trou_ adds a watermark so his identity documents cannot be abused if lost
+```
+convert -density 150 -fill  "rgba(255,0,0,0.25)"  -gravity Center -pointsize 80 -draw "rotate -45 text 0,0 \"TESTING\"" source.png destination.png
+```
+
 ### my dude @fak3r
 
 scan for raspberry pis under the desk
