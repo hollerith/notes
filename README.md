@@ -1,5 +1,13 @@
 # notes 
 
+### bluey @CyberRaiju with some useful pwsh magic
+
+As admin get the hash of scheduled tasks from System32 dir:
+
+````
+$a=((gci tasks -rec | Select-String "<Command>" | select -exp Line).replace("<Command>","").trim("</Command>").replace("`"","").trim());foreach ($b in $a){filehash ([System.Environment]::ExpandEnvironmentVariables($b))}
+````
+
 ### @_trou_ adds a watermark so his identity documents cannot be abused if lost
 ```
 convert -density 150 -fill  "rgba(255,0,0,0.25)"  -gravity Center -pointsize 80 -draw "rotate -45 text 0,0 \"TESTING\"" source.png destination.png
