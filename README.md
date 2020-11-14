@@ -1,5 +1,15 @@
 # notes 
 
+### @_batsec_ red team hint
+
+If you're bored of sysmon, here's a quick an dirty one liner to disable it.
+
+````
+logman stop EventLog-Microsoft-Windows-Sysmon-Operational -ets
+````
+
+Just make sure you run it as system.
+
 ### bluey @CyberRaiju with some useful pwsh magic
 
 As admin get the hash of scheduled tasks from System32 dir:
