@@ -1,5 +1,13 @@
 # notes 
 
+### @ofjaaah with the madness to extract DNS from a certificate 
+sed -ne 's/^\( *\)Subject:/\1/p;/X509v3 Subject Alternative Name/{
+    N;s/^.*\n//;:a;s/^\( *\)\(.*\), /\1\2\n\1/;ta;p;q; }' < <(
+    openssl x509 -noout -text -in <(
+        openssl s_client -ign_eof 2>/dev/null <<<$'HEAD / HTTP/1.0\r\n\r' \
+            -connect target.com:443 ) ) 
+
+
 ### @_batsec_ red team hint
 
 If you're bored of sysmon, here's a quick an dirty one liner to disable it.
