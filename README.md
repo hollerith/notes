@@ -1,6 +1,6 @@
 # notes 
 
-### you're not supposed to scan the DOD, makes them very angry.
+### you're not supposed to scan the DOD - it makes them very angry.
 ````
 mildew | anew domain | xargs -P 500 -a domains -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @' | xargs -I@ -P10 sh -c 'gospider -a -s "https://@" -d 2 | grep -Eo "(http|https)://[^/\"].*\.js+" | sed "s#\] \- #\n#g" | anew'
 ````
