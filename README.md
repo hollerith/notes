@@ -1,4 +1,10 @@
 # notes 
+
+### you're not supposed to scan the DOD, makes them very angry.
+````
+mildew | anew domain | xargs -P 500 -a domains -I@ sh -c 'nc -w1 -z -v @ 443 2>/dev/null && echo @' | xargs -I@ -P10 sh -c 'gospider -a -s "https://@" -d 2 | grep -Eo "(http|https)://[^/\"].*\.js+" | sed "s#\] \- #\n#g" | anew'
+````
+
 ### his highness bestoys his munificent bounty upon us once again
 ````
 gospider -d 0 -s "https://DOMAIN" -c 5 -t 100 -d 5 --blacklist jpg,jpeg,gif,css,tif,tiff,png,ttf,woff,woff2,ico,pdf,svg,txt | grep -Eo '(http|https)://[^/"]+' | anew spider1
