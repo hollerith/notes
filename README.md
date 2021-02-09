@@ -1,5 +1,10 @@
 # notes 
 
+## Blind sysmon Grzegorz Tworek @0gtweet
+````
+logman stop EventLog-System -ets
+````
+
 ## @ofjaaah is literally doing the same thing on his own github XD latest ones:
 ````
 assetfinder -subs-only DOMAIN -silent | httpx -timeout 3 -threads 300 --follow-redirects -silent | xargs -I% -P10 sh -c 'hakrawler -plain -linkfinder -depth 5 -url %' | awk '{print $3}' | grep -E "\.js(?:onp?)?$" | anew
